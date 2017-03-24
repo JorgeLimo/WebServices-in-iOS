@@ -14,6 +14,8 @@
 		FB66922F1E84A47800E4327E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB66922D1E84A47800E4327E /* LaunchScreen.storyboard */; };
 		FB66923C1E84A8A000E4327E /* PublicacionCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66923B1E84A8A000E4327E /* PublicacionCelda.swift */; };
 		FB66923E1E84A9FB00E4327E /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66923D1E84A9FB00E4327E /* publicacion.swift */; };
+		FB6692401E84BA2900E4327E /* AgregarPublicacionesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66923F1E84BA2900E4327E /* AgregarPublicacionesTVC.swift */; };
+		FB6692421E84BFB900E4327E /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6692411E84BFB900E4327E /* DetalleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FB6692301E84A47800E4327E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB66923B1E84A8A000E4327E /* PublicacionCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicacionCelda.swift; sourceTree = "<group>"; };
 		FB66923D1E84A9FB00E4327E /* publicacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
+		FB66923F1E84BA2900E4327E /* AgregarPublicacionesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgregarPublicacionesTVC.swift; sourceTree = "<group>"; };
+		FB6692411E84BFB900E4327E /* DetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				FB6692261E84A47800E4327E /* ViewController.swift */,
+				FB66923F1E84BA2900E4327E /* AgregarPublicacionesTVC.swift */,
+				FB6692411E84BFB900E4327E /* DetalleViewController.swift */,
 			);
 			name = controladores;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB6692421E84BFB900E4327E /* DetalleViewController.swift in Sources */,
+				FB6692401E84BA2900E4327E /* AgregarPublicacionesTVC.swift in Sources */,
 				FB6692271E84A47800E4327E /* ViewController.swift in Sources */,
 				FB66923E1E84A9FB00E4327E /* publicacion.swift in Sources */,
 				FB66923C1E84A8A000E4327E /* PublicacionCelda.swift in Sources */,

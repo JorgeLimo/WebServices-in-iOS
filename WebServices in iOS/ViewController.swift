@@ -10,19 +10,14 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var tvpublicaciones: UITableView!
+    
+    
     var publicaciones = Array<publicacion>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        for i in 1...8{
-            
-            let publi =  publicacion()
-            publi.titulo = "publicacion \(i)"
-            publi.contenido = "contenido \(i)"
-            publicaciones.append(publi)
-        }
         
     }
 
@@ -33,6 +28,40 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return publicaciones.count
+    }
+    
+    func obtenerPublicaciones(){
+        
+        publicaciones.removeAll()
+        
+        for i in 1...8{
+            
+            let publi =  publicacion()
+            publi.titulo = "publicacion \(i)"
+            publi.contenido = "contenido \(i)"
+            publicaciones.append(publi)
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let publi = publicaciones[indexPath.row]
+        
+        self.performSegue(withIdentifier: "detalle", sender: publi)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if  segue.identifier == "detalle"{
+            
+            let detallecontroler = segue.destination as! DetalleViewController
+            
+            detallecontroler.publi = sender as! publicacion
+            
+        }
+        
     }
     
     
@@ -49,6 +78,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         return cell
     }
+    
+    @IBAction func cargarpublicaciones(_ sender: UIBarButtonItem) {
+        self.obtenerPublicaciones()
+        tvpublicaciones.reloadData()
+    }
+    
+    
 
 }
 
