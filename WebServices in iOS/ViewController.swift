@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -33,15 +34,24 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func obtenerPublicaciones(){
         
         publicaciones.removeAll()
+        let hub  = MBProgressHUD(view : self.view)
+        hub.show(animated: true)
         
-        for i in 1...8{
+        PublicacionWebService.listarTodo { (jsonResultado) in
+            self.publicaciones = jsonResultado
+            self.tvpublicaciones.reloadData()
+            hub.hide(animated: true)
+
+        }
+        
+        /**for i in 1...8{
             
             let publi =  publicacion()
             publi.titulo = "publicacion \(i)"
             publi.contenido = "contenido \(i)"
             publicaciones.append(publi)
         }
-        
+        **/
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -81,7 +91,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBAction func cargarpublicaciones(_ sender: UIBarButtonItem) {
         self.obtenerPublicaciones()
-        tvpublicaciones.reloadData()
     }
     
     

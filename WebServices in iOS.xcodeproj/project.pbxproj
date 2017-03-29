@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2035417723437A2CC26037C1 /* Pods_WebServices_in_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2641E974F0C88C685D462332 /* Pods_WebServices_in_iOS.framework */; };
+		8489C4141E8B45940021C807 /* PublicacionWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489C4131E8B45930021C807 /* PublicacionWebService.swift */; };
 		FB6692251E84A47800E4327E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6692241E84A47800E4327E /* AppDelegate.swift */; };
 		FB6692271E84A47800E4327E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6692261E84A47800E4327E /* ViewController.swift */; };
 		FB66922A1E84A47800E4327E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6692281E84A47800E4327E /* Main.storyboard */; };
@@ -19,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		056583954AACA42A6EC7E466 /* Pods-WebServices in iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebServices in iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebServices in iOS/Pods-WebServices in iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2641E974F0C88C685D462332 /* Pods_WebServices_in_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebServices_in_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8489C4131E8B45930021C807 /* PublicacionWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicacionWebService.swift; sourceTree = "<group>"; };
+		8489C4151E8B58BA0021C807 /* WebServices in iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebServices in iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9771829D66200D0B987DC38 /* Pods-WebServices in iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebServices in iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebServices in iOS/Pods-WebServices in iOS.release.xcconfig"; sourceTree = "<group>"; };
 		FB6692211E84A47800E4327E /* WebServices in iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebServices in iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6692241E84A47800E4327E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB6692261E84A47800E4327E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +44,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2035417723437A2CC26037C1 /* Pods_WebServices_in_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2D941034576694A0356937 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2641E974F0C88C685D462332 /* Pods_WebServices_in_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC50D7555D8FFED3BBEFD3FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				056583954AACA42A6EC7E466 /* Pods-WebServices in iOS.debug.xcconfig */,
+				C9771829D66200D0B987DC38 /* Pods-WebServices in iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FB6692181E84A47700E4327E = {
 			isa = PBXGroup;
 			children = (
 				FB6692231E84A47800E4327E /* WebServices in iOS */,
 				FB6692221E84A47800E4327E /* Products */,
+				DC50D7555D8FFED3BBEFD3FE /* Pods */,
+				7D2D941034576694A0356937 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +97,7 @@
 				FB6692241E84A47800E4327E /* AppDelegate.swift */,
 				FB66922B1E84A47800E4327E /* Assets.xcassets */,
 				FB6692301E84A47800E4327E /* Info.plist */,
+				8489C4151E8B58BA0021C807 /* WebServices in iOS-Bridging-Header.h */,
 			);
 			path = "WebServices in iOS";
 			sourceTree = "<group>";
@@ -85,6 +113,7 @@
 		FB6692371E84A79200E4327E /* consumo web */ = {
 			isa = PBXGroup;
 			children = (
+				8489C4131E8B45930021C807 /* PublicacionWebService.swift */,
 			);
 			name = "consumo web";
 			sourceTree = "<group>";
@@ -123,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB6692331E84A47800E4327E /* Build configuration list for PBXNativeTarget "WebServices in iOS" */;
 			buildPhases = (
+				73C639758F84FFEBB4E76063 /* [CP] Check Pods Manifest.lock */,
 				FB66921D1E84A47800E4327E /* Sources */,
 				FB66921E1E84A47800E4327E /* Frameworks */,
 				FB66921F1E84A47800E4327E /* Resources */,
+				B0519E4F49AA4409D7DEF524 /* [CP] Embed Pods Frameworks */,
+				6E78DC10237CD0F8D653FF0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +181,7 @@
 					FB6692201E84A47800E4327E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = P9PVR449G4;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -184,6 +217,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E78DC10237CD0F8D653FF0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebServices in iOS/Pods-WebServices in iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73C639758F84FFEBB4E76063 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0519E4F49AA4409D7DEF524 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WebServices in iOS/Pods-WebServices in iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB66921D1E84A47800E4327E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -194,6 +275,7 @@
 				FB6692271E84A47800E4327E /* ViewController.swift in Sources */,
 				FB66923E1E84A9FB00E4327E /* publicacion.swift in Sources */,
 				FB66923C1E84A8A000E4327E /* PublicacionCelda.swift in Sources */,
+				8489C4141E8B45940021C807 /* PublicacionWebService.swift in Sources */,
 				FB6692251E84A47800E4327E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,26 +397,33 @@
 		};
 		FB6692341E84A47800E4327E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 056583954AACA42A6EC7E466 /* Pods-WebServices in iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P9PVR449G4;
 				INFOPLIST_FILE = "WebServices in iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pe.ourlimm.WebServices-in-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WebServices in iOS/WebServices in iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		FB6692351E84A47800E4327E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9771829D66200D0B987DC38 /* Pods-WebServices in iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P9PVR449G4;
 				INFOPLIST_FILE = "WebServices in iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pe.ourlimm.WebServices-in-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WebServices in iOS/WebServices in iOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -358,6 +447,7 @@
 				FB6692351E84A47800E4327E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
