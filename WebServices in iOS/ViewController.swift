@@ -36,6 +36,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         publicaciones.removeAll()
         let hub  = MBProgressHUD(view : self.view)
         hub.show(animated: true)
+        hub.label.text = "Cargando..."
+        
+        
+        self.view.addSubview(hub)
         
         PublicacionWebService.listarTodo { (jsonResultado) in
             self.publicaciones = jsonResultado
